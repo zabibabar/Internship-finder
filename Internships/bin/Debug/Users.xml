@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ArrayOfUserAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UserAccount Login="zabi" Password="zabi97" Email="zabi" PersonalInfoEntered="Yes" EducationalInfoEntered="Yes" FirstName="Zabeeh Ullah" LastName="Babar" BirthDate="12/1/2004 12:00:00 AM" Gender="Male" Race="Asian" StreetNumber="11315" StreetName="Rose Mary" City="Tampa" State="Florida" ZipCode="33617" Country="33617" Nationality="Pakistani" PhoneNumber="8135469118" School="USF" Major="CS" GPA="3.8" EnrollmentYear="2018" ExpectedGraduationYear="2018" CollegeStanding="Junior">
+    <Shortlist />
+  </UserAccount>
+  <UserAccount Login="z" Password="zabi97" Email="z" PersonalInfoEntered="Yes" EducationalInfoEntered="Yes" FirstName="Zabeeh" LastName="Babar" BirthDate="12/1/2004 12:00:00 AM" Gender="Male" Race="White" StreetNumber="11315" StreetName="Rose" City="Tampa" State="Florida" ZipCode="33617" Country="33617" Nationality="Pakistnao" PhoneNumber="8135469118" School="USF" Major="CS" GPA="3.6" EnrollmentYear="2018" ExpectedGraduationYear="2018" CollegeStanding="Sophomore" />
+</ArrayOfUserAccount>

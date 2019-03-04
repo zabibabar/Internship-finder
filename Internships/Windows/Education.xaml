@@ -1,0 +1,58 @@
+﻿<Window x:Class="Internships.Education"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Internships"
+        mc:Ignorable="d"
+        Title="Education" Height="300" Width="470">
+    <Grid Background="#FF72ACCA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="College/University" Grid.Row="1" Grid.Column="1" Margin="5"/>
+        <TextBox Name="UserSchool" Text="{Binding CurrentUser.School}" Grid.Row="1" Grid.Column="2" Width="150" Margin="5" GotFocus="TextFieldChanged"/>
+
+        <Label Content="Major" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <TextBox Name="UserMajor" Text="{Binding CurrentUser.Major}" Grid.Row="2" Grid.Column="2" Width="150" Margin="5" GotFocus="TextFieldChanged"/>
+
+        <Label Content="GPA" Grid.Row="3" Grid.Column="1" Margin="5"/>
+        <TextBox Focusable="False" Text="{Binding ElementName=Ticker,Path=Value}" Name ="GPA" Grid.Row="3" Grid.Column="2" Width="150" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Slider Name="Ticker" Grid.Row="3" Grid.Column="3" Width="150" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"
+                Value="{Binding CurrentUser.GPA}" TickPlacement="BottomRight" TickFrequency="0.1" Minimum="2.0" Maximum="4.0" IsSnapToTickEnabled="True"/>
+
+        <Label Content="Enrollment Date" Grid.Row="4" Grid.Column="1" Margin="5"/>
+        <DatePicker Name="UserEnrollment" Focusable="False" Grid.Row="4" Grid.Column="2"  Width="150" Height="30" 
+                    VerticalAlignment="Center" HorizontalAlignment="Center" GotFocus="TextFieldChanged"/>
+
+        <Label Content="Expected Graduation" Grid.Row="5" Grid.Column="1" Margin="5"/>
+        <DatePicker Name="UserGraduation" Focusable="False" Grid.Row="5" Grid.Column="2" Width="150" Height="30" 
+                    VerticalAlignment="Center" HorizontalAlignment="Center" GotFocus="TextFieldChanged"/>
+
+        <Label Content="College Standing" Grid.Row="6" Grid.Column="1" Margin="5"/>
+        <ComboBox Name="UserCollegeStanding" Grid.Row="6" Grid.Column="2" Width="150" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <ComboBoxItem Content="--Select an option below--"/>
+            <ComboBoxItem Content="Freshman"/>
+            <ComboBoxItem Content="Sophomore"/>
+            <ComboBoxItem Content="Junior"/>
+            <ComboBoxItem Content="Senior"/>
+        </ComboBox>
+
+        <Button Content="Save and Submit" Height="25" Width="150" Grid.Row="7" Grid.Column="2" Margin="5" Command="{Binding SubmitCommand}"/>
+
+    </Grid>
+</Window>
